@@ -16,7 +16,7 @@ public static void main(String[] args) throws InterruptedException {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.get("https://thriversity.harappa.education/login");
-		driver.get("https://www.fb.com");
+//		driver.get("https://www.fb.com");
 		driver.manage().window().maximize();
 //		driver.findElement(By.xpath("//input[@type='email']")).sendKeys("pushkar.kumar@harappa.education");
 //		driver.findElement(By.xpath("//input[@id='password-field']")).sendKeys("harappa123");
@@ -35,11 +35,12 @@ public static void main(String[] args) throws InterruptedException {
 //		List<WebElement> link = driver.findElements(By.tagName("span"));
 //		System.out.println(link.size());
 
-		
+		boolean status = driver.findElement(By.xpath("//img[@src='assets/images/thriversity-logo.png']")).isDisplayed();
+		System.out.println("Status of logo : "+status);
 		
 				
-//		Thread.sleep(10000);
-//		driver.close();
+		Thread.sleep(3000);
+		driver.close();
 		
 		
 		

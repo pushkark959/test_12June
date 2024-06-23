@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testCase.TC_LoginPageThriversity">
+      <class name="testCase.TC_LoginScreen">
         <methods>
-          <include name="exit"/>
-          <include name="setUp"/>
-          <include name="checkHeaderImage"/>
+          <include name="close"/>
+          <include name="setup"/>
+          <include name="testusername"/>
         </methods>
-      </class> <!-- testCase.TC_LoginPageThriversity -->
+      </class> <!-- testCase.TC_LoginScreen -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

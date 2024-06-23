@@ -27,13 +27,13 @@ public class TC_LoginPageThriversity extends BaseClass {
 		Thread.sleep(3000);
 	}
 	
-	@Test(priority=2)
+	@Test(priority=2,dependsOnMethods= {"EnterUserName"})
 		public void EnterPassword() throws InterruptedException {
 		lpt.setPassword().sendKeys(prop.getProperty("password"));
 		Thread.sleep(3000);	
 	}
 		
-	@Test(priority=3)
+	@Test(priority=3,dependsOnMethods= {"EnterUserName"})
 	public void clickSubmitButton() throws InterruptedException {
 		lpt.clickSubmit().click();
 		Thread.sleep(3000);
@@ -41,6 +41,9 @@ public class TC_LoginPageThriversity extends BaseClass {
 	
 	@Test(priority=4)
 	public void checkHeaderImage() {
+		lpt.setusername().sendKeys(prop.getProperty("userName"));
+		lpt.setPassword().sendKeys(prop.getProperty("password"));
+		lpt.clickSubmit().click();
 		boolean b = lpt.headerimage().isDisplayed();
 		System.out.println("Presence of Header Image : "+b);
 		Assert.assertEquals(b, true);

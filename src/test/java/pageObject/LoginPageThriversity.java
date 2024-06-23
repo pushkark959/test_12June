@@ -9,7 +9,9 @@ import testBase.BaseClass;
 
 public class LoginPageThriversity extends BaseClass{
 	
-	
+	public LoginPageThriversity() {
+		PageFactory.initElements(driver, this);
+	}
 	
 	//Element
 	
@@ -25,9 +27,7 @@ public class LoginPageThriversity extends BaseClass{
 	@FindBy(xpath = "//div[@class='hero-section__video intro-video-image']")
 	WebElement imgheader;
 	
-	public LoginPageThriversity() {
-		PageFactory.initElements(driver, this);
-	}
+
 	
 	
 
